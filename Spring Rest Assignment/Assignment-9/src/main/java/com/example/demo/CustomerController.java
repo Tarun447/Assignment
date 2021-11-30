@@ -22,7 +22,7 @@ public class CustomerController {
 	repository.save(customer);
 	return "Customer added with id :" + customer.getId();
 }
-	@GetMapping("/findSpecificCustomer/{id}")
+	@GetMapping("/findCustomer/{id}")
 	public Optional<Customer> getEmployee(@PathVariable int id)
 	{
         return repository.findById(id);
